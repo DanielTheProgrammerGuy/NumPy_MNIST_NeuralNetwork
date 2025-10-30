@@ -10,7 +10,7 @@ screen = pg.display.set_mode((200, 200))
 font = pg.font.Font(None, 20)
 screen.fill((0, 0, 0))
 
-with open("../neural_network.pkl", 'rb') as file:
+with open("neural_network.pkl", 'rb') as file:
     nn = pickle.load(file)
 
 while True:
