@@ -41,7 +41,7 @@ while True:
             connect = False
         pg.display.flip()
 
-    screen_array = np.mean(pg.surfarray.array3d(screen),axis=-1)/255
+    screen_array = np.pad(np.mean(pg.surfarray.array3d(screen),axis=-1)/255,1,"constant",constant_values=0)
     number_of_digits = 0
     draw_array = []
     final_number = ""
